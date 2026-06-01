@@ -104,7 +104,7 @@ export default function Home() {
           {videoBlob && (
             <button
               onClick={handleSaveToDevice}
-              className="w-full rounded-lg bg-green-500 px-4 py-3 font-bold text-white hover:bg-green-400 transition-colors"
+              className="w-full rounded-lg bg-green-600 px-4 py-3 font-bold text-white hover:bg-green-500 transition-colors"
             >
               Save to Device
             </button>
