@@ -1,22 +1,53 @@
-import Head from "next/head";
+
+import { useState } from "react"
 
 export default function Home() {
+  const [url, setUrl] = useState<string>("")
+  const [status, setStatus] = useState<"done" | "error" | null>(null)
+  const [loading, setLoading] = useState<boolean>(false)
+
+  async function handleDownload(): Promise<void> {
+    setLoading(true)
+    setStatus(null)
+    try {
+      const res = await fetch("http://localhost:8000/download", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url }),
+      })
+
+      if (!res.ok) throw new Error("Download failed")
+
+      // Trigger browser download
+      const blob = await res.blob()
+      const a = document.createElement("a")
+      a.href = URL.createObjectURL(blob)
+      a.download = "tiktok.mp4"
+      a.click()
+      URL.revokeObjectURL(a.href)
+      setStatus("done")
+    } catch (e: unknown) {
+      setStatus("error")
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
-    <>
-      <Head>
-        <title>Tiktok Downloader</title>
-        <meta name="description" content="Download Tiktok Videos" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-            Tiktok Downloader
-          </h1>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-          </div>
-        </div>
-      </main>
-    </>
-  );
+
+    <div style={{ padding: 40, maxWidth: 500, margin: "0 auto" }}>
+      <h1>TikTok Downloader</h1>
+      <input
+        value={url}
+        onChange={e => setUrl(e.target.value)}
+        placeholder="Paste TikTok URL"
+        style={{ width: "100%", padding: 8, marginBottom: 12 }}
+      />
+      <button onClick={handleDownload} disabled={loading || !url}>
+        {loading ? "Downloading..." : "Download"}
+      </button>
+      {status === "done" && <p>✅ Done!</p>}
+      {status === "error" && <p>❌ Something went wrong</p>}
+    </div>
+  )
 }
