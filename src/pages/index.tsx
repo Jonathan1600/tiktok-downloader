@@ -97,7 +97,7 @@ export default function Home() {
                 Processing
               </span>
             ) : (
-              "Download"
+              "Process Video"
             )}
           </button>
           
@@ -106,7 +106,7 @@ export default function Home() {
               onClick={handleSaveToDevice}
               className="w-full rounded-lg bg-green-600 px-4 py-3 font-bold text-white hover:bg-green-500 transition-colors"
             >
-              Save to Device
+              Download
             </button>
           )}
           
