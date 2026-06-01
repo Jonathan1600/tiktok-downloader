@@ -10,7 +10,7 @@ export default function Home() {
     setLoading(true)
     setStatus(null)
     try {
-      const res = await fetch("http://localhost:8000/download", {
+      const res = await fetch("https://tkd-be.onrender.com/download", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url }),
