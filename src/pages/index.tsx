@@ -104,14 +104,14 @@ export default function Home() {
           {videoBlob && (
             <button
               onClick={handleSaveToDevice}
-              className="w-full rounded-lg bg-gray-800 px-4 py-3 font-bold text-white hover:bg-gray-700 transition-colors"
+              className="w-full rounded-lg bg-green-500 px-4 py-3 font-bold text-white hover:bg-green-400 transition-colors"
             >
               Save to Device
             </button>
           )}
           
           {status === "done" && videoBlob && (
-            <p className="mt-6 text-center text-red-500 font-semibold">✅ Ready to save!</p>
+            <p className="mt-6 text-center text-green-500 font-semibold">✅ Ready to save!</p>
           )}
           {status === "error" && (
             <p className="mt-6 text-center text-red-500 font-semibold">❌ Something went wrong</p>
