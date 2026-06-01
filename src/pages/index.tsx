@@ -1,5 +1,6 @@
 
 import { useState } from "react"
+import Head from "next/head"
 
 export default function Home() {
   const [url, setUrl] = useState<string>("")
@@ -34,20 +35,30 @@ export default function Home() {
   }
 
   return (
-
-    <div style={{ padding: 40, maxWidth: 500, margin: "0 auto" }}>
-      <h1>TikTok Downloader</h1>
-      <input
-        value={url}
-        onChange={e => setUrl(e.target.value)}
-        placeholder="Paste TikTok URL"
-        style={{ width: "100%", padding: 8, marginBottom: 12 }}
-      />
-      <button onClick={handleDownload} disabled={loading || !url}>
-        {loading ? "Downloading..." : "Download"}
-      </button>
-      {status === "done" && <p>✅ Done!</p>}
-      {status === "error" && <p>❌ Something went wrong</p>}
-    </div>
+    <>
+      <Head>
+        <title>Tiktok Downloader</title>
+        <meta name="description" content="Download Tiktok Videos" />
+        <link rel="icon" href="/greendownload48.png" /> 
+      </Head>
+      <div className="mx-auto max-w-md p-10">
+        <h1 className="mb-6 text-2xl font-bold">TikTok Downloader</h1>
+        <input
+          value={url}
+          onChange={e => setUrl(e.target.value)}
+          placeholder="Paste TikTok URL"
+          className="mb-4 w-full rounded border border-gray-300 px-3 py-2"
+        />
+        <button
+          onClick={handleDownload}
+          disabled={loading || !url}
+          className="w-full rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600 disabled:bg-gray-400"
+        >
+          {loading ? "Downloading..." : "Download"}
+        </button>
+        {status === "done" && <p>✅ Done!</p>}
+        {status === "error" && <p>❌ Something went wrong</p>}
+      </div>
+    </>
   )
 }
