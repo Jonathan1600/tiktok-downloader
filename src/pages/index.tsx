@@ -35,10 +35,11 @@ export default function Home() {
   function handleSaveToDevice(): void {
     if (!videoBlob) return
 
+    const timestamp = Date.now()
     const blobUrl = URL.createObjectURL(videoBlob)
     const a = document.createElement("a")
     a.href = blobUrl
-    a.download = "tiktok.mp4"
+    a.download = `tiktokdownload-${timestamp}.mp4`
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
