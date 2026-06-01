@@ -51,14 +51,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Tiktok Downloader</title>
-        <meta name="description" content="Download Tiktok Videos" />
+        <title>TikTok Video Downloader</title>
+        <meta name="description" content="Download TikTok Videos" />
         <link rel="icon" href="/greendownload48.png" /> 
       </Head>
       <div className="min-h-screen bg-black">
         <div className="mx-auto flex max-w-md flex-col items-center justify-center min-h-screen px-6 py-10">
           <h1 className="mb-2 text-4xl font-black text-white">TikTok</h1>
-          <p className="mb-8 text-sm text-gray-400">Downloader</p>
+          <p className="mb-8 text-sm text-gray-400">Video Downloader</p>
           
           <input
             value={url}
@@ -94,10 +94,10 @@ export default function Home() {
                     d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                   ></path>
                 </svg>
-                Processing
+                Downloading
               </span>
             ) : (
-              "Process Video"
+              status === "done" && videoBlob ? "Download Another Video" : "Download Video"
             )}
           </button>
           
@@ -106,7 +106,7 @@ export default function Home() {
               onClick={handleSaveToDevice}
               className="w-full rounded-lg bg-green-600 px-4 py-3 font-bold text-white hover:bg-green-500 transition-colors"
             >
-              Download
+              Save to Device
             </button>
           )}
           
