@@ -52,14 +52,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Jimbo's TikTok Video Downloader</title>
+        <title>Jimbo&apos;s TikTok Video Downloader</title>
         <meta name="description" content="Download HD TikTok Videos without watermarks for Free made by Jimbo" />
         <link rel="icon" href="/greendownload48.png" /> 
       </Head>
       <div className="min-h-screen bg-black">
         <header className="border-b border-gray-800 bg-black sticky top-0 z-10">
           <div className="mx-auto max-w-full px-4 py-3 flex justify-between items-center">
-            <h2 className=" font-semibold bg-gradient-to-r from-pink-400 to-indigo-700 bg-clip-text text-transparent">Jimbo's TikTok Downloader</h2>
+            <h2 className=" font-semibold bg-gradient-to-r from-pink-400 to-indigo-700 bg-clip-text text-transparent">Jimbo&apos;s TikTok Downloader</h2>
             <a
               href="https://www.jonathancalderon.me/"
               target="_blank"
@@ -71,7 +71,7 @@ export default function Home() {
           </div>
         </header>
         <div className="mx-auto flex max-w-md flex-col items-center justify-center min-h-auto px-6 py-10">
-          <h1 className="mb-2 text-4xl font-black text-white text-center">Jimbo's TikTok Downloader</h1>
+          <h1 className="mb-2 text-4xl font-black text-white text-center">Jimbo&apos;s TikTok Downloader</h1>
           <p className="mb-8 text-sm text-gray-400">Free HD Watermarkless Video Downloader</p>
           
           <input
