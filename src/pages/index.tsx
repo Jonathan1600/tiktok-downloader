@@ -53,7 +53,7 @@ export default function Home() {
     <>
       <Head>
         <title>TikTok Video Downloader</title>
-        <meta name="description" content="Download TikTok Videos" />
+        <meta name="description" content="Download HD TikTok Videos without watermarks for Free" />
         <link rel="icon" href="/greendownload48.png" /> 
       </Head>
       <div className="min-h-screen bg-black">
