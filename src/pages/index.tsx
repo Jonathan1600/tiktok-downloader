@@ -1,6 +1,7 @@
 
 import { useState } from "react"
 import Head from "next/head"
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
   const [url, setUrl] = useState<string>("")
@@ -118,6 +119,7 @@ export default function Home() {
           )}
         </div>
       </div>
+      <Analytics/>
     </>
   )
 
