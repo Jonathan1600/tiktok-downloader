@@ -58,13 +58,13 @@ export default function Home() {
       </Head>
       <div className="min-h-screen bg-black">
         <header className="border-b border-gray-800 bg-black sticky top-0 z-10">
-          <div className="mx-auto max-w-full px-6 py-4 flex justify-between items-center">
-            <h2 className="text-sm font-semibold text-white">Jimbo's TikTok Downloader</h2>
+          <div className="mx-auto max-w-full px-4 py-3 flex justify-between items-center">
+            <h2 className=" font-semibold bg-gradient-to-r from-pink-400 to-indigo-700 bg-clip-text text-transparent">Jimbo's TikTok Downloader</h2>
             <a
               href="https://www.jonathancalderon.me/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-gray-400 hover:text-white transition-colors"
+              className=" text-gray-400 hover:text-white transition-colors"
             >
               Portfolio
             </a>
