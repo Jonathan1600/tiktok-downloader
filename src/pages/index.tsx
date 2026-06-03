@@ -52,14 +52,27 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>TikTok Video Downloader</title>
-        <meta name="description" content="Download HD TikTok Videos without watermarks for Free" />
+        <title>Jimbo's TikTok Video Downloader</title>
+        <meta name="description" content="Download HD TikTok Videos without watermarks for Free made by Jimbo" />
         <link rel="icon" href="/greendownload48.png" /> 
       </Head>
       <div className="min-h-screen bg-black">
-        <div className="mx-auto flex max-w-md flex-col items-center justify-center min-h-screen px-6 py-10">
-          <h1 className="mb-2 text-4xl font-black text-white">TikTok</h1>
-          <p className="mb-8 text-sm text-gray-400">Video Downloader</p>
+        <header className="border-b border-gray-800 bg-black sticky top-0 z-10">
+          <div className="mx-auto max-w-full px-6 py-4 flex justify-between items-center">
+            <h2 className="text-sm font-semibold text-white">Jimbo's TikTok Downloader</h2>
+            <a
+              href="https://www.jonathancalderon.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              Portfolio
+            </a>
+          </div>
+        </header>
+        <div className="mx-auto flex max-w-md flex-col items-center justify-center min-h-auto px-6 py-10">
+          <h1 className="mb-2 text-4xl font-black text-white text-center">Jimbo's TikTok Downloader</h1>
+          <p className="mb-8 text-sm text-gray-400">Free HD Watermarkless Video Downloader</p>
           
           <input
             value={url}
