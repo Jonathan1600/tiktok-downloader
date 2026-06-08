@@ -1,29 +1,15 @@
-# Create T3 App
+# Jimbo's TikTok Downloader
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+## What's this web app? Can I download tiktok here? 
 
-## What's next? How do I make an app with this?
+No! This web app is for downloading the videos themselves. It aims to download full tiktok videos on HD and without the TikTok watermark. If it can't find this version it will fall back to non-HD or the one with watermark that TikTok provides. 
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+Just paste the link, let it process and download it to your device when it's ready.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+Live Link: https://tiktok-downloader-jmb.vercel.app/
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+Backend live link: https://tkd-be.onrender.com/download
 
-## Learn More
+Backend  Github: https://github.com/Jonathan1600/tkd-be
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Technologies used on this project: yt-dlp, typescript,  python, javascript, html, css, FastApi, NextJS, TailwindCSS
